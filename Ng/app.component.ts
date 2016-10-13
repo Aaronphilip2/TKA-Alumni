@@ -6,7 +6,6 @@ import { User } from './user';
   template:`
   	<div class="header">
   		<h1 class="title">TKA Alumni</h1>
-  		<a routerLink="/home" class="home">Home</a>
   	</div>
   	<router-outlet></router-outlet>
   `,

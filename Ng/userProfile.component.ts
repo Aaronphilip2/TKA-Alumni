@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Params }   from '@angular/router';
 import { Location }                 from '@angular/common';
+import { Router } from '@angular/router';
 
 import { User } from "./user"
 import { UserService } from './user.service'
@@ -19,6 +20,7 @@ import { UserService } from './user.service'
 			<h3>Specialization: {{user.specialization}}</h3>
 			<h3>Email: {{user.email}}</h3>
 			<h3>Phone Number: {{user.phone}}</h3>
+			<button (click)="goToHome()">Home</button>
 		</div>
 	`,
 	providers: [UserService]
@@ -31,7 +33,8 @@ export class UserProfileComponent implements OnInit {
  	constructor(
 	  private userService: UserService,
 	  private route: ActivatedRoute,
-	  private location: Location
+	  private location: Location,
+	  private router: Router
 	) {}
 
 	ngOnInit(): void {
@@ -40,6 +43,10 @@ export class UserProfileComponent implements OnInit {
 	    this.userService.getUser(id)
 	      .then(user => this.user = user);
 	  });
-	  console.log(this.user)
+	}
+
+	goToHome() {
+		let link = ['/home'];
+		this.router.navigate(link);
 	}
 }
