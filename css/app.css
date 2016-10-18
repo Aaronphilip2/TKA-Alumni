@@ -22,6 +22,13 @@
     color: #FFD700;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 250%; }
+  .header .search {
+    position: absolute;
+    top: .4em;
+    left: 12em;
+    height: 1.3em;
+    width: 20em;
+    font-size: 1.5em; }
 
 a {
   text-decoration: none; }
