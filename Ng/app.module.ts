@@ -9,6 +9,7 @@ import { InMemoryDataService }  from './in-memory-data.service';
 import { AppComponent }         from './app.component';
 import { ProfileListComponent } from './profileList.component';
 import { UserProfileComponent } from './userProfile.component';
+import { ProfileEditorComponent } from './profileEditor.component'
 import { routing } from './app.routing';
 
 
@@ -23,7 +24,8 @@ import { routing } from './app.routing';
   declarations: [ 
   	AppComponent, 
   	ProfileListComponent,
-  	UserProfileComponent
+  	UserProfileComponent,
+    ProfileEditorComponent
   ],
   bootstrap:    [ AppComponent ]
 })

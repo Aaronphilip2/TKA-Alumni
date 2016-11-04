@@ -17,6 +17,7 @@ var in_memory_data_service_1 = require('./in-memory-data.service');
 var app_component_1 = require('./app.component');
 var profileList_component_1 = require('./profileList.component');
 var userProfile_component_1 = require('./userProfile.component');
+var profileEditor_component_1 = require('./profileEditor.component');
 var app_routing_1 = require('./app.routing');
 var AppModule = (function () {
     function AppModule() {
@@ -33,7 +34,8 @@ var AppModule = (function () {
             declarations: [
                 app_component_1.AppComponent,
                 profileList_component_1.ProfileListComponent,
-                userProfile_component_1.UserProfileComponent
+                userProfile_component_1.UserProfileComponent,
+                profileEditor_component_1.ProfileEditorComponent
             ],
             bootstrap: [app_component_1.AppComponent]
         }), 

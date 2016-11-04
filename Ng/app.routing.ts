@@ -2,12 +2,17 @@ import { ModuleWithProviders }  from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { ProfileListComponent } from './profileList.component';
-import { UserProfileComponent } from './userProfile.component'
+import { UserProfileComponent } from './userProfile.component';
+import { ProfileEditorComponent } from './profileEditor.component';
 
 const appRoutes: Routes = [
 	{
 		path: 'home',
 		component: ProfileListComponent
+	},
+	{
+		path: 'editor',
+		component: ProfileEditorComponent
 	},
 	{
 		path: '',

@@ -7,6 +7,7 @@ import { User } from './user';
   	<div class="header">
   		<h1 class="title">TKA Alumni</h1>
   		<input class="search" type="text" placeholder="Search">
+      <i class="fa fa-cog fa-2x gear" aria-hidden="true" routerLink="/editor" routerLinkActive="active"></i>
   	</div>
   	<router-outlet></router-outlet>
   `,

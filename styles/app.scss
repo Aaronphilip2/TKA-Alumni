@@ -33,6 +33,13 @@
 		width: 20em;
 		font-size: 1.5em;
 	}
+	.gear {
+		position: absolute;
+		top: .3em;
+		right: .2em;
+		color: grey;
+		cursor: pointer;
+	}
 }
 
 a {

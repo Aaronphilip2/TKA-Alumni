@@ -29,6 +29,12 @@
     height: 1.3em;
     width: 20em;
     font-size: 1.5em; }
+  .header .gear {
+    position: absolute;
+    top: .3em;
+    right: .2em;
+    color: grey;
+    cursor: pointer; }
 
 a {
   text-decoration: none; }
