@@ -15,6 +15,7 @@ var UserService = (function () {
     function UserService(http) {
         this.http = http;
         this.usersUrl = 'app/users';
+        this.headers = new http_1.Headers({ 'Content-Type': 'application/json' });
     }
     UserService.prototype.getUsers = function () {
         return this.http.get(this.usersUrl)
@@ -25,6 +26,14 @@ var UserService = (function () {
     UserService.prototype.getUser = function (id) {
         return this.getUsers()
             .then(function (users) { return users.find(function (user) { return user.id === id; }); });
+    };
+    UserService.prototype.update = function (user) {
+        var url = this.usersUrl + "/" + user.id;
+        return this.http
+            .put(url, JSON.stringify(user), { headers: this.headers })
+            .toPromise()
+            .then(function () { return user; })
+            .catch(this.handleError);
     };
     UserService.prototype.handleError = function (error) {
         console.error('An error occurred', error); // for demo purposes only

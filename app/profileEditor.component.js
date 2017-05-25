@@ -16,18 +16,26 @@ var ProfileEditorComponent = (function () {
         this.userService = userService;
         this.router = router;
         this.currentId = 2;
+        this.editMode = false;
     }
     ProfileEditorComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.userService.getUser(this.currentId)
             .then(function (user) { return _this.user = user; });
     };
+    ProfileEditorComponent.prototype.edit = function () {
+        this.editMode = true;
+    };
+    ProfileEditorComponent.prototype.save = function () {
+        this.editMode = false;
+        this.userService.update(this.user);
+    };
     ProfileEditorComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
             selector: 'profile-editor',
             styleUrls: ["../css/profileEditor.css"],
-            template: "\n\t\t<div class=\"wrapper\">\n\t\t\t<h3 *ngIf=\"user\">{{user.firstName + \" \" + user.lastName}}</h3>\n\t\t</div>\n\t",
+            template: "\n\t\t<div *ngIf=\"user\" class=\"wrapper\">\n\t\t\t<h3>{{user.firstName + \" \" + user.lastName}}</h3>\n\t\t\t\n\t\t\t<div *ngIf=\"!editMode\">\n\t\t\t\t<p>Occupation: {{user.occupation}}</p>\n\t\t\t\t<p>Major: {{user.major}}</p>\n\t\t\t\t<p>College: {{user.college}}</p>\n\t\t\t\t<p>Degree: {{user.degree}}</p>\n\t\t\t\t<p>Specialization: {{user.specialization}}</p>\n\t\t\t\t<p>Email: {{user.email}}</p>\n\t\t\t\t<p>Phone Number: {{user.phone}}</p>\n\t\t\t</div>\n\n\n\t\t\t<div *ngIf=\"editMode\">\n\t\t\t\t<input type=\"text\" [(ngModel)]=\"user.occupation\">\n\t\t\t\t<input type=\"text\" [(ngModel)]=\"user.major\">\n\t\t\t\t<input type=\"text\" [(ngModel)]=\"user.college\">\n\t\t\t\t<input type=\"text\" [(ngModel)]=\"user.degree\">\n\t\t\t\t<input type=\"text\" [(ngModel)]=\"user.specialization\">\n\t\t\t\t<input type=\"text\" [(ngModel)]=\"user.email\">\n\t\t\t\t<input type=\"text\" [(ngModel)]=\"user.phone\">\n\t\t\t</div>\n\t\t\t\n\t\t\t<button *ngIf=\"!editMode\" (click)=\"edit()\">Edit</button>\n\t\t\t<button *ngIf=\"editMode\" (click)=\"save()\">Save</button>\n\t\t</div>\n\t",
             providers: [user_service_1.UserService]
         }), 
         __metadata('design:paramtypes', [user_service_1.UserService, router_1.Router])
