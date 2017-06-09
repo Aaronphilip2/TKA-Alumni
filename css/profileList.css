@@ -1,6 +1,6 @@
 .users {
   position: absolute;
-  top: 3.3em;
+  top: 4.3em;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -13,17 +13,20 @@
     color: black;
     border-radius: .5em;
     font-family: helvetica;
-    font-size: 2em; }
+    font-size: 2em;
+    font-weight: 10em; }
     .users li:hover {
       background-color: #52658f;
       cursor: pointer;
       color: white; }
-    .users li img {
+      .users li:hover .noProfile {
+        box-shadow: -0.07em -0.07em #333a56; }
+    .users li .noProfile {
       position: relative;
       height: 3em;
       width: 3em;
       left: 0;
-      background-color: #f2f2f2;
+      background-color: #52658f;
       border-radius: .3em;
       padding: .1em .1em .1em .1em; }
 

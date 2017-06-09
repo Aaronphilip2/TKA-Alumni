@@ -11,7 +11,7 @@ import { UserService } from './user.service';
 	template: `
 		<ul class="users">
 			<li *ngFor="let user of users" (click)="goToUser(user)">
-				<img src="../images/noProfile.svg" *ngIf="user.photo === null">
+				<img src="../images/noProfile.svg" class="noProfile" *ngIf="user.photo === null">
 				{{user.firstName + " " + user.lastName}}
 			</li>
 		</ul>
