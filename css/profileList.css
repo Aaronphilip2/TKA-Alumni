@@ -1,8 +1,6 @@
 .users {
   position: absolute;
-  top: 1.5em;
-  font-size: 2em;
-  font-family: trebuchet;
+  top: 3.3em;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -11,13 +9,22 @@
   .users li {
     padding-bottom: .5em;
     padding-top: .5em;
-    padding-left: .5em;
+    padding-left: .3em;
     color: black;
     border-radius: .5em;
-    font-family: helvetica; }
+    font-family: helvetica;
+    font-size: 2em; }
     .users li:hover {
       background-color: #52658f;
       cursor: pointer;
       color: white; }
+    .users li img {
+      position: relative;
+      height: 3em;
+      width: 3em;
+      left: 0;
+      background-color: #f2f2f2;
+      border-radius: .3em;
+      padding: .1em .1em .1em .1em; }
 
 /*# sourceMappingURL=profileList.css.map */

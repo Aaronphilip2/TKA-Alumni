@@ -2,9 +2,7 @@
 
 .users{
 	position: absolute;
-	top: 1.5em;
-	font-size: 2em;
-	font-family: trebuchet;
+	top: 3.3em;
 	list-style: none;
 	margin: 0;
 	padding: 0;
@@ -14,15 +12,26 @@
 	li {
 		padding-bottom: .5em;
 		padding-top: .5em;
-		padding-left: .5em;
+		padding-left: .3em;
 		color: black;
 		border-radius: .5em;
 		font-family: helvetica;
+		font-size: 2em;
 
 		&:hover {
 			background-color: $light-blue;
 			cursor: pointer;
 			color: white;
+		}
+
+		img {
+			position: relative;
+			height: 3em;
+			width: 3em;
+			left: 0;
+			background-color: $cream;
+			border-radius: .3em;
+			padding: .1em .1em .1em .1em;
 		}
 	}
 }

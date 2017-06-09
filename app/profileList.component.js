@@ -30,7 +30,7 @@ var ProfileListComponent = (function () {
             moduleId: module.id,
             selector: "profile-list",
             styleUrls: ["../css/profileList.css"],
-            template: "\n\t\t<ul class=\"users\">\n\t\t\t<li *ngFor=\"let user of users\" (click)=\"goToUser(user)\">{{user.firstName + \" \" + user.lastName}}</li>\n\t\t</ul>\n\t",
+            template: "\n\t\t<ul class=\"users\">\n\t\t\t<li *ngFor=\"let user of users\" (click)=\"goToUser(user)\">\n\t\t\t\t<img src=\"../images/noProfile.svg\" *ngIf=\"user.photo === null\">\n\t\t\t\t{{user.firstName + \" \" + user.lastName}}\n\t\t\t</li>\n\t\t</ul>\n\t",
             providers: [user_service_1.UserService]
         }), 
         __metadata('design:paramtypes', [user_service_1.UserService, router_1.Router])

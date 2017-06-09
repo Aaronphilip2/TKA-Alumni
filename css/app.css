@@ -30,7 +30,9 @@
     height: 1.3em;
     width: 20em;
     font-size: 1.5em;
-    background-color: #f7f5e6; }
+    background-color: #f7f5e6;
+    border-radius: .5em;
+    padding-left: .1em; }
   .header .gear {
     position: absolute;
     top: .3em;

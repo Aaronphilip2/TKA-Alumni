@@ -10,7 +10,10 @@ import { UserService } from './user.service';
 	styleUrls: ["../css/profileList.css"],
 	template: `
 		<ul class="users">
-			<li *ngFor="let user of users" (click)="goToUser(user)">{{user.firstName + " " + user.lastName}}</li>
+			<li *ngFor="let user of users" (click)="goToUser(user)">
+				<img src="../images/noProfile.svg" *ngIf="user.photo === null">
+				{{user.firstName + " " + user.lastName}}
+			</li>
 		</ul>
 	`,
 	providers: [ UserService ]
