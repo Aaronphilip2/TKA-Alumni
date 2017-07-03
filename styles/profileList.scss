@@ -17,7 +17,6 @@
 		border-radius: .5em;
 		font-family: helvetica;
 		font-size: 2em;
-		font-weight: 10em;
 
 		&:hover {
 			background-color: $light-blue;
@@ -27,16 +26,41 @@
 			.noProfile {
 				box-shadow: -.07em -.07em $blue;
 			}
+
+			.classification {
+				color: #b3b3b3;
+			}
 		}
 
 		.noProfile {
 			position: relative;
+			display: inline-block;
 			height: 3em;
 			width: 3em;
 			left: 0;
 			background-color: $light-blue;
 			border-radius: .3em;
 			padding: .1em .1em .1em .1em;
+		}
+
+		.name {
+			position: relative;
+			display: inline-block;
+			margin: 0;
+			top: -.8em;
+			left: 1em;
+		}
+
+		.classification {
+			position: relative;
+			display: block;
+			margin: 0;
+			top: -3em;
+			left: 7.2em;
+			font-size: .6em;
+			color: grey;
+			font-style: italic;
+
 		}
 	}
 }

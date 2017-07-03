@@ -37,7 +37,7 @@ var UserProfileComponent = (function () {
             moduleId: module.id,
             selector: "user-profile",
             styleUrls: ["../css/profile.css"],
-            template: "\n\t\t<div *ngIf=\"user\">\n\t\t\t<h3>{{user.firstName + \" \" + user.lastName}}</h3>\n\t\t\t<h3>Occupation: {{user.occupation}}</h3>\n\t\t\t<h3>Major: {{user.major}}</h3>\n\t\t\t<h3>College: {{user.college}}</h3>\n\t\t\t<h3>Degree: {{user.degree}}</h3>\n\t\t\t<h3>Specialization: {{user.specialization}}</h3>\n\t\t\t<h3>Email: {{user.email}}</h3>\n\t\t\t<h3>Phone Number: {{user.phone}}</h3>\n\t\t\t<button (click)=\"goToHome()\">Home</button>\n\t\t</div>\n\t",
+            template: "\n\t\t<div *ngIf=\"user\">\n\t\t\t<img src=\"{{user.photo != null ? user.photo : '../images/noProfile.svg'}}\" [ngClass]=\"{'noProfile' : user.photo === null, 'userPhoto' : user.photo != null}\" >\n\t\t\t<p class=\"name\">{{user.firstName + \" \" + user.lastName}}</p>\n\t\t</div>\n\t",
             providers: [user_service_1.UserService]
         }), 
         __metadata('design:paramtypes', [user_service_1.UserService, router_1.ActivatedRoute, common_1.Location, router_2.Router])

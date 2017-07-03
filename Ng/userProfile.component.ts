@@ -12,15 +12,8 @@ import { UserService } from './user.service'
 	styleUrls: ["../css/profile.css"],
 	template: `
 		<div *ngIf="user">
-			<h3>{{user.firstName + " " + user.lastName}}</h3>
-			<h3>Occupation: {{user.occupation}}</h3>
-			<h3>Major: {{user.major}}</h3>
-			<h3>College: {{user.college}}</h3>
-			<h3>Degree: {{user.degree}}</h3>
-			<h3>Specialization: {{user.specialization}}</h3>
-			<h3>Email: {{user.email}}</h3>
-			<h3>Phone Number: {{user.phone}}</h3>
-			<button (click)="goToHome()">Home</button>
+			<img src="{{user.photo != null ? user.photo : '../images/noProfile.svg'}}" [ngClass]="{'noProfile' : user.photo === null, 'userPhoto' : user.photo != null}" >
+			<p class="name">{{user.firstName + " " + user.lastName}}</p>
 		</div>
 	`,
 	providers: [UserService]
