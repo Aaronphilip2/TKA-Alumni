@@ -36,7 +36,8 @@
       display: inline-block;
       margin: 0;
       top: -.8em;
-      left: 1em; }
+      left: 1em;
+      font-family: arial; }
     .users li .classification {
       position: relative;
       display: block;

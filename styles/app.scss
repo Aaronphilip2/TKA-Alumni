@@ -1,5 +1,6 @@
 /* Master Styles */
 @import 'variables';
+
 .header {
 	position: absolute;
 	left: 0;
@@ -9,64 +10,73 @@
 	border-bottom: 1px solid black;
 	background-color: #d9d9d9;
 
-	.title {
-	  position: relative;
-	  margin: 0;
-	  top: .05em;
-	  left: .2em;
-	  color: $blue;
-	  font-family: Arial, Helvetica, sans-serif;
-	  font-size: 250%;
+	&.expand {
+		height: 7em;
 	}
-	.home {
-	  position: absolute;
-	  margin: 0;
-	  top: .2em;
-	  right: .2em;
-	  color: #FFD700;
-	  font-family: Arial, Helvetica, sans-serif;
-	  font-size: 250%;
-	}
-	.search {
-		position: absolute;
-		top: .4em;
-		left: 12em;
-		height: 1.3em;
-		width: 20em;
-		font-size: 1.5em;
-		background-color: $off-white;
-		border-radius: .4em;
-		padding-left: .1em;
 
-		&:focus {
-			outline: none;
+	.headerWrapper{
+		width: 70em;
+		margin: auto;
+
+		.title {
+		  position: relative;
+		  margin: 0;
+		  top: .05em;
+		  left: .2em;
+		  color: $blue;
+		  font-family: Arial, Helvetica, sans-serif;
+		  font-size: 250%;
 		}
-	}
-	.gear {
-		position: absolute;
-		top: .3em;
-		right: .2em;
-		color: $blue;
-		cursor: pointer;
-
-		&:hover {
-			color: black;
-		}
-	}
-
-	.settings {
-		position: absolute;
-		right: .2em;
-		top: 3em;
-		width: 7em;
-		height: 4em;
-		background-color: #d9d9d9;
-		z-index: 999;
-
-		a {
-			display: block;
+		.search {
+			position: relative;
+			top: -1.5em;
+			left: 12em;
+			height: 1.3em;
+			width: 20em;
 			font-size: 1.5em;
-			text-align: center;
+			background-color: $off-white;
+			border-radius: .4em;
+			padding-left: .1em;
+
+			&:focus {
+				outline: none;
+			}
+		}
+
+		.advSearch{
+			display: inline-block;
+			position: relative;
+			top: -2.5em;
+			left:20em;
+		}
+
+		.gear {
+			position: absolute;
+			top: .3em;
+			right: .2em;
+			color: $blue;
+			cursor: pointer;
+
+			&:hover {
+				color: black;
+			}
+		}
+
+
+		.settings {
+			position: absolute;
+			right: .2em;
+			top: 3em;
+			width: 7em;
+			height: 4em;
+			background-color: #d9d9d9;
+			z-index: 999;
+
+			a {
+				display: block;
+				font-size: 1.5em;
+				text-align: center;
+			}
 		}
 	}
 }

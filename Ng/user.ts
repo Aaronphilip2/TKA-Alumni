@@ -14,4 +14,5 @@ export class User {
 	state: string;
 	classification: string; //student, alumni, family or friend
 	photo: any;
+	bio: string;
 }

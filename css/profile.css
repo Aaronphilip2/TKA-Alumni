@@ -1,23 +1,69 @@
-div {
-  position: absolute;
-  top: 3.5em;
-  width: 100%; }
-  div .noProfile {
+.profileWrapper {
+  position: relative;
+  width: 65em;
+  margin: auto;
+  margin-top: 5em;
+  background-color: #f2f2f2;
+  height: 100%;
+  box-shadow: -.2em -.2em .5em #b3b3b3; }
+  .profileWrapper .noProfile {
     position: relative;
     height: 15em;
     width: 15em;
     left: 2em;
-    top: 3em;
+    top: 7em;
     background-color: #52658f;
     border-radius: .3em;
     padding: .1em .1em .1em .1em; }
-  div .name {
+  .profileWrapper .name {
     position: relative;
-    display: inline-block;
+    display: block;
     font-size: 2.5em;
-    top: -1.1em;
-    left: 2em;
+    top: -5.7em;
+    left: .8em;
     margin: 0;
     font-family: helvetica; }
+  .profileWrapper .classification {
+    position: relative;
+    display: block;
+    font-size: 1.45em;
+    top: -10em;
+    left: 1.4em;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif; }
+  .profileWrapper .title {
+    position: relative;
+    display: block;
+    font-size: 1.45em;
+    top: -10.1em;
+    left: 1.4em;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif; }
+  .profileWrapper .info {
+    position: relative;
+    left: 22em;
+    top: -14.5em;
+    display: inline-block;
+    width: 30em;
+    height: 20em; }
+    .profileWrapper .info p {
+      position: relative;
+      font-size: 1.5em;
+      margin: 0 0 .7em 0; }
+    .profileWrapper .info .label {
+      color: grey;
+      display: block; }
+    .profileWrapper .info .data {
+      color: black;
+      display: inline;
+      left: 8em;
+      top: -2em; }
+  .profileWrapper .bio {
+    position: relative;
+    font-size: 1.5em;
+    margin: 0 0 1em 0;
+    color: black;
+    width: 40em;
+    margin: auto; }
 
 /*# sourceMappingURL=profile.css.map */
